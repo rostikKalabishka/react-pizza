@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Categories } from "./components/Categories/Categories";
+import { Header } from "./components/Header/Header";
+import { PizzaBlock } from "./components/PizzaBlock/PizzaBlock";
+import { Sort } from "./components/Sort";
+import "./scss/app.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="wrapper">
+      <Header />
+      <div class="content">
+        <div class="container">
+          <div class="content__top">
+            <Categories />
+            <Sort />
+          </div>
+          <h2 class="content__title">All pizza</h2>
+          <div class="content__items"></div>
+          <PizzaBlock title="dsadsada" price={29.99} />
+        </div>
+      </div>
     </div>
   );
 }
