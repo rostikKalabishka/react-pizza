@@ -13,7 +13,7 @@ function App() {
       <Header />
       <div className="content">
         <div className="container">
-          <NotFound />
+          <Home />
         </div>
       </div>
     </div>
