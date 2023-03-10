@@ -1,5 +1,5 @@
 import logoSvg from "../../assets/img/pizza-logo.svg";
-export function Header() {
+export function Header({ items, onChangeSearchInput, searchValue }) {
   return (
     <div className="header">
       <div className="container">

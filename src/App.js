@@ -1,12 +1,11 @@
-import { Categories } from "./components/Categories/Categories";
 import { Header } from "./components/Header/Header";
-import { PizzaBlock } from "./components/PizzaBlock/PizzaBlock";
-import { Sort } from "./components/Sort";
+
 import "./scss/app.scss";
 
-import pizzas from "./assets/pizzas.json";
-
-console.log(pizzas);
+import Home from "./pages/Home";
+import { Route } from "react-router-dom";
+import Drawer from "./pages/Cart";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -14,16 +13,7 @@ function App() {
       <Header />
       <div className="content">
         <div className="container">
-          <div className="content__top">
-            <Categories />
-            <Sort />
-          </div>
-          <h2 className="content__title">All pizza</h2>
-          <div className="content__items">
-            {pizzas.map((obj) => (
-              <PizzaBlock {...obj} />
-            ))}
-          </div>
+          <NotFound />
         </div>
       </div>
     </div>
