@@ -6,7 +6,7 @@ const NotFoundBlock = () => {
     <h1 className={styles.root}>
       <span>🤡</span>
       <br />
-      Not Found
+      Not Found 404
     </h1>
   );
 };

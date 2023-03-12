@@ -3,7 +3,7 @@ import { Header } from "./components/Header/Header";
 import "./scss/app.scss";
 
 import Home from "./pages/Home";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Drawer from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 
@@ -12,9 +12,13 @@ function App() {
     <div className="wrapper">
       <Header />
       <div className="content">
-        <div className="container">
-          <Home />
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/cart" element={<Drawer />} />
+
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
     </div>
   );
